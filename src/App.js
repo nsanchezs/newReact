@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Link, Route } from "wouter";
+import './App.css'
+import ListOfGif from "./components/ListOfGif";
 
-function App() {
+
+export default function App() {
+  /* const [keyword, setKeyword] = useState(['panda']) */
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App-header'>
+      {/* <button onClick={() => setKeyword('peru')}>Cambiar</button> */}
+      <h1>App</h1>
+      <Link to="/gif/Peru">Link de Perú</Link>
+      <Link to="/gif/Chile">Link de Chile</Link>
+      <Link to="/gif/Colombia">Link de Colombia</Link>
+      <Route
+        component={ListOfGif}
+        path="/gif/:keyword"
+      />
+      {/* <ListOfGif keyword={'programmin'} /> */}
     </div>
   );
 }
 
-export default App;
+

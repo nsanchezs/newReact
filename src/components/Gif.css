@@ -1,0 +1,25 @@
+.Gif {
+  border: 2px, solid, rgb(56, 170, 10);
+  border-radius: 6px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.Gif h4 {
+  margin: 0;
+}
+
+.Gif img {
+  object-fit: contain;
+}
+
+i {
+  font-size: 80px;
+  color: chartreuse;
+}
